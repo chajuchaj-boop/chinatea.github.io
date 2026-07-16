@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Калькулятор ЧаюЧай</title>
     
     <!-- ===== МЕТА-ТЕГИ ДЛЯ TELEGRAM И СОЦСЕТЕЙ ===== -->
-    <meta property="og:title" content="Калькулятор себестоимости чая — ЧаюЧай" />
-    <meta property="og:description" content="Рассчитайте себестоимость и маржинальность чая за 5 секунд. Простой инструмент для менеджеров ЧаюЧай." />
-    <meta property="og:image" content="https://chajuchaj-boop.github.io/chinatea.github.io/preview.jpg" />
-    <meta property="og:url" content="https://chajuchaj-boop.github.io/chinatea.github.io/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="ЧаюЧай" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:title" content="Калькулятор себестоимости чая — ЧаюЧай">
+    <meta property="og:description" content="Рассчитайте себестоимость и маржинальность чая за 5 секунд. Простой инструмент для менеджеров ЧаюЧай.">
+    <meta property="og:image" content="https://chajuchaj-boop.github.io/chinatea.github.io/preview.jpg">
+    <meta property="og:url" content="https://chajuchaj-boop.github.io/chinatea.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ЧаюЧай">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpg">
     
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Калькулятор себестоимости чая — ЧаюЧай" />
-    <meta name="twitter:description" content="Рассчитайте себестоимость и маржинальность чая за 5 секунд." />
-    <meta name="twitter:image" content="https://chajuchaj-boop.github.io/chinatea.github.io/preview.jpg" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Калькулятор ЧаюЧай</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Калькулятор себестоимости чая — ЧаюЧай">
+    <meta name="twitter:description" content="Рассчитайте себестоимость и маржинальность чая за 5 секунд. Простой инструмент для менеджеров ЧаюЧай.">
+    <meta name="twitter:image" content="https://chajuchaj-boop.github.io/chinatea.github.io/preview.jpg">
+    <!-- ============================================ -->
+    
     <style>
+        /* Стили для мобильной адаптации */
         * {
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -47,8 +47,6 @@
             box-shadow: 0 12px 40px -8px rgba(20, 50, 40, 0.18);
             margin: 0 auto;
         }
-
-        /* Шапка */
         .header {
             text-align: center;
             margin-bottom: 24px;
@@ -76,15 +74,11 @@
             font-size: 0.95rem;
             margin-top: 4px;
         }
-
-        /* Разделитель */
         .divider {
             border: none;
             border-top: 2px dashed #d0e3db;
             margin: 18px 0 16px;
         }
-
-        /* Поля ввода */
         .input-group {
             display: flex;
             flex-direction: column;
@@ -105,8 +99,7 @@
             color: #3f7063;
             font-size: 0.72rem;
         }
-        .input-group input,
-        .input-group select {
+        .input-group input, .input-group select {
             background: #f1f9f6;
             border: 1px solid #d0e3db;
             border-radius: 16px;
@@ -120,17 +113,10 @@
             -webkit-appearance: none;
             appearance: none;
         }
-        .input-group input:focus,
-        .input-group select:focus {
+        .input-group input:focus, .input-group select:focus {
             border-color: #267a66;
             background: white;
             box-shadow: 0 0 0 4px rgba(38, 122, 102, 0.12);
-        }
-        .input-group input[readonly] {
-            background: #e4f0eb;
-            border-color: #b8cdc3;
-            color: #154b3f;
-            font-weight: 600;
         }
         .input-group select {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231a4a42' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -138,21 +124,14 @@
             background-position: right 16px center;
             padding-right: 40px;
         }
-
-        /* Сетка 2 колонки */
         .row-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
         }
         @media (max-width: 420px) {
-            .row-2 {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
+            .row-2 { grid-template-columns: 1fr; gap: 0; }
         }
-
-        /* Блок результатов */
         .result-block {
             background: #e2f1eb;
             border-radius: 20px;
@@ -169,9 +148,7 @@
             border-bottom: 1px solid #cbe0d7;
             gap: 8px;
         }
-        .result-row:last-child {
-            border-bottom: none;
-        }
+        .result-row:last-child { border-bottom: none; }
         .result-row .label {
             font-weight: 500;
             color: #16493f;
@@ -187,8 +164,6 @@
             white-space: nowrap;
             text-align: right;
         }
-
-        /* Кнопка */
         .btn-reset {
             background: transparent;
             border: 1.5px solid #267a66;
@@ -208,11 +183,6 @@
             background: #267a66;
             color: white;
         }
-        .btn-reset:active {
-            transform: scale(0.97);
-        }
-
-        /* Футер */
         .footer {
             margin-top: 20px;
             color: #2f6257;
@@ -222,219 +192,168 @@
             padding-top: 14px;
             line-height: 1.5;
         }
-
-        .flex-center {
-            display: flex;
-            justify-content: center;
-        }
-
-        .currency {
-            font-weight: 600;
-            color: #1a4a42;
-        }
-
-        /* Убираем стрелки у number */
+        .flex-center { display: flex; justify-content: center; }
+        .currency { font-weight: 600; color: #1a4a42; }
+        
         input[type=number]::-webkit-outer-spin-button,
         input[type=number]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-        input[type=number] {
-            -moz-appearance: textfield;
-        }
-
-        /* Планшеты и десктопы */
+        input[type=number] { -moz-appearance: textfield; }
+        
         @media (min-width: 768px) {
-            body {
-                padding: 32px;
-                align-items: center;
-            }
-            .container {
-                padding: 32px 36px 34px;
-                max-width: 620px;
-            }
-            .header h1 {
-                font-size: 2rem;
-            }
-            .result-row {
-                font-size: 1rem;
-                padding: 10px 0;
-            }
+            body { padding: 32px; align-items: center; }
+            .container { padding: 32px 36px 34px; max-width: 620px; }
+            .header h1 { font-size: 2rem; }
+            .result-row { font-size: 1rem; padding: 10px 0; }
         }
-
         @media (max-width: 380px) {
-            .container {
-                padding: 16px 14px 20px;
-            }
-            .header h1 {
-                font-size: 1.4rem;
-            }
-            .input-group input,
-            .input-group select {
-                padding: 12px 14px;
-                font-size: 0.9rem;
-            }
-            .result-row {
-                font-size: 0.82rem;
-                padding: 6px 0;
-            }
-            .result-row .value {
-                font-size: 0.82rem;
-                padding: 1px 10px;
-            }
+            .container { padding: 16px 14px 20px; }
+            .header h1 { font-size: 1.4rem; }
+            .input-group input, .input-group select { padding: 12px 14px; font-size: 0.9rem; }
+            .result-row { font-size: 0.82rem; padding: 6px 0; }
+            .result-row .value { font-size: 0.82rem; padding: 1px 10px; }
         }
     </style>
 </head>
 <body>
-<div class="container">
+    <div class="container">
+        <div class="header">
+            <h1>🍃 ЧаюЧай <span>калькулятор</span></h1>
+            <p>Рассчитайте себестоимость и маржинальность</p>
+        </div>
 
-    <!-- Шапка -->
-    <div class="header">
-        <h1>🍃 ЧаюЧай <span>калькулятор</span></h1>
-        <p>Рассчитайте себестоимость и маржинальность</p>
+        <div class="row-2">
+            <div class="input-group">
+                <label>💰 Цена за 1 кг <span class="currency">BYN</span></label>
+                <input type="number" id="price" value="75" step="1" min="0">
+            </div>
+            <div class="input-group">
+                <label>⚖️ Расход на чайник, г</label>
+                <input type="number" id="weight" value="8" step="0.5" min="0.5">
+            </div>
+        </div>
+
+        <div class="row-2">
+            <div class="input-group">
+                <label>🫖 Объём заварника</label>
+                <select id="volume">
+                    <option value="900">900 мл</option>
+                    <option value="600" selected>600 мл</option>
+                    <option value="500">500 мл</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>💰 Цена продажи чайника <span class="currency">BYN</span></label>
+                <input type="number" id="sellPrice" value="8.50" step="0.10" min="0">
+            </div>
+        </div>
+
+        <div class="row-2">
+            <div class="input-group">
+                <label>📊 Чайников в день</label>
+                <input type="number" id="teapots" value="10" step="1" min="0">
+            </div>
+            <div class="input-group">
+                <label>📅 Дней в месяц</label>
+                <input type="number" id="days" value="30" step="1" min="1">
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="result-block">
+            <div class="result-row">
+                <span class="label">Себестоимость 1 чайника</span>
+                <span class="value" id="costPerTeapot">0.00 BYN</span>
+            </div>
+            <div class="result-row">
+                <span class="label">Маржинальность с 1 чайника</span>
+                <span class="value" id="marginPerTeapot">0.00 BYN</span>
+            </div>
+            <div class="result-row">
+                <span class="label">Маржинальность %</span>
+                <span class="value" id="marginPercent">0%</span>
+            </div>
+            <div class="result-row">
+                <span class="label">Расход заварки в месяц</span>
+                <span class="value" id="monthlyUsage">0 г</span>
+            </div>
+            <div class="result-row">
+                <span class="label">Затраты на чай в месяц</span>
+                <span class="value" id="monthlyCost">0.00 BYN</span>
+            </div>
+            <div class="result-row">
+                <span class="label">Выручка с чая в месяц</span>
+                <span class="value" id="monthlyRevenue">0.00 BYN</span>
+            </div>
+        </div>
+
+        <div class="flex-center">
+            <button class="btn-reset" id="resetDefaults">↺ Сбросить пример</button>
+        </div>
+
+        <div class="footer">
+            * Себестоимость считается из цены за 1 кг. Маржинальность = (цена продажи — себестоимость) / цена продажи × 100%.
+        </div>
     </div>
 
-    <!-- Параметры -->
-    <div class="row-2">
-        <div class="input-group">
-            <label>💰 Цена за 1 кг <span class="currency">BYN</span></label>
-            <input type="number" id="price" value="75" step="1" min="0">
-        </div>
-        <div class="input-group">
-            <label>⚖️ Расход на чайник, г</label>
-            <input type="number" id="weight" value="8" step="0.5" min="0.5">
-        </div>
-    </div>
+    <script>
+        (function() {
+            const price = document.getElementById('price');
+            const weight = document.getElementById('weight');
+            const volume = document.getElementById('volume');
+            const sellPrice = document.getElementById('sellPrice');
+            const teapots = document.getElementById('teapots');
+            const days = document.getElementById('days');
 
-    <div class="row-2">
-        <div class="input-group">
-            <label>🫖 Объём заварника</label>
-            <select id="volume">
-                <option value="900">900 мл</option>
-                <option value="600" selected>600 мл</option>
-                <option value="500">500 мл</option>
-            </select>
-        </div>
-        <div class="input-group">
-            <label>💰 Цена продажи чайника <span class="currency">BYN</span></label>
-            <input type="number" id="sellPrice" value="8.50" step="0.10" min="0">
-        </div>
-    </div>
+            const costPerTeapot = document.getElementById('costPerTeapot');
+            const marginPerTeapot = document.getElementById('marginPerTeapot');
+            const marginPercent = document.getElementById('marginPercent');
+            const monthlyUsage = document.getElementById('monthlyUsage');
+            const monthlyCost = document.getElementById('monthlyCost');
+            const monthlyRevenue = document.getElementById('monthlyRevenue');
 
-    <div class="row-2">
-        <div class="input-group">
-            <label>📊 Чайников в день</label>
-            <input type="number" id="teapots" value="10" step="1" min="0">
-        </div>
-        <div class="input-group">
-            <label>📅 Дней в месяц</label>
-            <input type="number" id="days" value="30" step="1" min="1">
-        </div>
-    </div>
+            function calculate() {
+                const p = parseFloat(price.value) || 0;
+                const w = parseFloat(weight.value) || 0;
+                const sell = parseFloat(sellPrice.value) || 0;
+                const t = parseFloat(teapots.value) || 0;
+                const d = parseFloat(days.value) || 1;
 
-    <hr class="divider">
+                const gramPrice = p / 1000;
+                const costTeapot = w * gramPrice;
+                const margin = sell - costTeapot;
+                const marginPct = sell > 0 ? (margin / sell) * 100 : 0;
 
-    <!-- Результаты -->
-    <div class="result-block">
-        <div class="result-row">
-            <span class="label">Себестоимость 1 чайника</span>
-            <span class="value" id="costPerTeapot">0.00 BYN</span>
-        </div>
-        <div class="result-row">
-            <span class="label">Маржинальность с 1 чайника</span>
-            <span class="value" id="marginPerTeapot">0.00 BYN</span>
-        </div>
-        <div class="result-row">
-            <span class="label">Маржинальность %</span>
-            <span class="value" id="marginPercent">0%</span>
-        </div>
-        <div class="result-row">
-            <span class="label">Расход заварки в месяц</span>
-            <span class="value" id="monthlyUsage">0 г</span>
-        </div>
-        <div class="result-row">
-            <span class="label">Затраты на чай в месяц</span>
-            <span class="value" id="monthlyCost">0.00 BYN</span>
-        </div>
-        <div class="result-row">
-            <span class="label">Выручка с чая в месяц</span>
-            <span class="value" id="monthlyRevenue">0.00 BYN</span>
-        </div>
-    </div>
+                const monthlyUsageVal = t * w * d;
+                const monthlyCostVal = t * costTeapot * d;
+                const monthlyRevenueVal = t * sell * d;
 
-    <div class="flex-center">
-        <button class="btn-reset" id="resetDefaults">↺ Сбросить пример</button>
-    </div>
+                costPerTeapot.textContent = costTeapot.toFixed(2) + ' BYN';
+                marginPerTeapot.textContent = margin.toFixed(2) + ' BYN';
+                marginPercent.textContent = marginPct.toFixed(1) + '%';
+                monthlyUsage.textContent = monthlyUsageVal.toFixed(0) + ' г';
+                monthlyCost.textContent = monthlyCostVal.toFixed(2) + ' BYN';
+                monthlyRevenue.textContent = monthlyRevenueVal.toFixed(2) + ' BYN';
+            }
 
-    <div class="footer">
-        * Себестоимость считается из цены за 1 кг. Маржинальность = (цена продажи — себестоимость) / цена продажи × 100%.
-    </div>
-</div>
+            function resetToExample() {
+                price.value = '75';
+                weight.value = '8';
+                volume.value = '600';
+                sellPrice.value = '8.50';
+                teapots.value = '10';
+                days.value = '30';
+                calculate();
+            }
 
-<script>
-    (function() {
-        // Элементы ввода
-        const price = document.getElementById('price');
-        const weight = document.getElementById('weight');
-        const volume = document.getElementById('volume');
-        const sellPrice = document.getElementById('sellPrice');
-        const teapots = document.getElementById('teapots');
-        const days = document.getElementById('days');
-
-        // Результаты
-        const costPerTeapot = document.getElementById('costPerTeapot');
-        const marginPerTeapot = document.getElementById('marginPerTeapot');
-        const marginPercent = document.getElementById('marginPercent');
-        const monthlyUsage = document.getElementById('monthlyUsage');
-        const monthlyCost = document.getElementById('monthlyCost');
-        const monthlyRevenue = document.getElementById('monthlyRevenue');
-
-        function calculate() {
-            // Чтение значений
-            const p = parseFloat(price.value) || 0;
-            const w = parseFloat(weight.value) || 0;
-            const sell = parseFloat(sellPrice.value) || 0;
-            const t = parseFloat(teapots.value) || 0;
-            const d = parseFloat(days.value) || 1;
-
-            // Себестоимость
-            const gramPrice = p / 1000;
-            const costTeapot = w * gramPrice;
-            const margin = sell - costTeapot;
-            const marginPct = sell > 0 ? (margin / sell) * 100 : 0;
-
-            // Месячные показатели
-            const monthlyUsageVal = t * w * d;
-            const monthlyCostVal = t * costTeapot * d;
-            const monthlyRevenueVal = t * sell * d;
-
-            // Обновление результатов
-            costPerTeapot.textContent = costTeapot.toFixed(2) + ' BYN';
-            marginPerTeapot.textContent = margin.toFixed(2) + ' BYN';
-            marginPercent.textContent = marginPct.toFixed(1) + '%';
-            monthlyUsage.textContent = monthlyUsageVal.toFixed(0) + ' г';
-            monthlyCost.textContent = monthlyCostVal.toFixed(2) + ' BYN';
-            monthlyRevenue.textContent = monthlyRevenueVal.toFixed(2) + ' BYN';
-        }
-
-        function resetToExample() {
-            price.value = '75';
-            weight.value = '8';
-            volume.value = '600';
-            sellPrice.value = '8.50';
-            teapots.value = '10';
-            days.value = '30';
-            calculate();
-        }
-
-        // Слушатели
-        const inputs = document.querySelectorAll('input, select');
-        inputs.forEach(el => el.addEventListener('input', calculate));
-        document.getElementById('resetDefaults').addEventListener('click', resetToExample);
-
-        // Запуск
-        resetToExample();
-    })();
-</script>
+            const inputs = document.querySelectorAll('input, select');
+            inputs.forEach(el => el.addEventListener('input', calculate));
+            document.getElementById('resetDefaults').addEventListener('click', resetToExample);
+            resetToExample();
+        })();
+    </script>
 </body>
 </html>
